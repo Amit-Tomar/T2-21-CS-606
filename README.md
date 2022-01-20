@@ -4,15 +4,11 @@
 
 2. `cd T2-21-CS-606`
 
-There are two ways to run these samples : 
-
-### Directly running the HTML/JS files
+### Running the examples
 
 For this, you need to serve the static files using any server. eg.
 
-1. If you are using VS Code, you can use the 'live server' plugin.
-
-https://www.freecodecamp.org/news/vscode-live-server-auto-refresh-browser/
+1. If you are using VS Code, you can use the 'live server' plugin. [https://www.freecodecamp.org/news/vscode-live-server-auto-refresh-browser/]
 
 1. If you have Python installed locally : 
 
