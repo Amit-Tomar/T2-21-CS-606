@@ -25,7 +25,7 @@
         attribute vec4 aPosition;  
         void main () {             
           gl_Position = aPosition; 
-          gl_PointSize = 1.0;     
+          gl_PointSize = 3.0;     
         }                          
 	  `;
 
@@ -34,7 +34,7 @@
         void main () {               
           gl_FragColor = vec4(0.0,0.0,0.0,1.0); 
         }                            
-      `;
+	  `;
 
 	// Compile vertex shader
 	const vertexShader = gl.createShader(gl.VERTEX_SHADER);
@@ -73,9 +73,9 @@
 	const aPosition = gl.getAttribLocation(shaderProgram, "aPosition");
 
 	const vertexData = new Float32Array([
-		0.5, 0.5, 0.0,
-		-0.5, 0.5, 0.0,
-		0.0, -0.5, 0.0		
+		0.5, -0.5, 0.0,
+		-0.5, -0.5, 0.0,
+		0.0, 0.5, 0.0		
 	]);
 
 	const elementPerVertex = 3;

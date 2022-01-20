@@ -1,10 +1,10 @@
-### Clone and running via command line
+## Clone and running via command line
 
 1. `git clone https://github.com/Amit-Tomar/T2-21-CS-606.git`
 
 2. `cd T2-21-CS-606`
 
-### Running the examples
+## Running the examples
 
 For this, you need to serve the static files using any server. eg.
 
@@ -24,12 +24,15 @@ For this, you need to serve the static files using any server. eg.
 	2. `http-server`
 
 
-# Basic Javascript tutorials (1 Hour each)
+## Basic Javascript tutorials (1 Hour each)
 
 1. https://www.youtube.com/watch?v=W6NZfCO5SIk
 2. https://www.youtube.com/watch?v=NCwa_xi0Uuc
 
-# WebGL Resources : 
+## Debugging JS in Chrome
+
+https://www.youtube.com/watch?v=H0XScE08hy8
+## WebGL Resources : 
 
 1.  https://webglfundamentals.org/
 
@@ -45,7 +48,7 @@ https://www.youtube.com/watch?v=tgVLb6fOVVc
 1. Fun With WebGL 2.0
 https://www.youtube.com/playlist?list=PLMinhigDWz6emRKVkVIEAaePW7vtIkaIF
 
-# Generic CG courses :
+## Generic CG courses :
 
 1. Introduction to 3D Computer Graphics
 https://www.youtube.com/watch?v=zxQjlIViRBE
