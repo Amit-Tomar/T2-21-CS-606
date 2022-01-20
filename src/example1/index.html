@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body></body>
+<script>
+	// Create canvas
+	const canvas = document.createElement("canvas");
+	canvas.style.backgroundColor = 'grey';
+	canvas.width = 500;
+	canvas.height = 500;
+
+	// Create WebGL context
+	document.querySelector("body").appendChild(canvas);
+	const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+	gl.viewport(0, 0, canvas.width, canvas.height);
+
+	if (!gl) throw new Error("WebGL is not supported");
+
+	// Clear canvas
+	gl.clearColor(0.95, 0.95, 0.95, 1.0);
+	gl.clear(gl.COLOR_BUFFER_BIT);
+
+	// Write shader code
+	const vertexShaderSrc = `      
+        attribute vec4 aPosition;  
+        void main () {             
+          gl_Position = aPosition; 
+          gl_PointSize = 1.0;     
+        }                          
+	  `;
+
+	const fragmentShaderSrc = `      
+        precision mediump float;          
+        void main () {               
+          gl_FragColor = vec4(0.0,0.0,0.0,1.0); 
+        }                            
+      `;
+
+	// Compile vertex shader
+	const vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	gl.shaderSource(vertexShader, vertexShaderSrc);
+	gl.compileShader(vertexShader);
+
+	if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS))
+	{
+		throw new Error(gl.getShaderInfoLog(vertexShader));
+	}
+
+	// Compile Fragment shader
+	const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	gl.shaderSource(fragmentShader, fragmentShaderSrc);
+	gl.compileShader(fragmentShader);
+
+	if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS))
+	{
+		throw new Error(gl.getShaderInfoLog(fragmentShader));
+	}
+
+	// Create shader program and link shaders
+	const shaderProgram = gl.createProgram();
+	gl.attachShader(shaderProgram, vertexShader);
+	gl.attachShader(shaderProgram, fragmentShader);
+	gl.linkProgram(shaderProgram);
+
+	if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS))
+	{
+		throw new Error(gl.getProgramInfoLog(shaderProgram));
+	}
+
+	gl.useProgram(shaderProgram);
+
+	// Create an attribute location
+	const aPosition = gl.getAttribLocation(shaderProgram, "aPosition");
+
+	const vertexData = new Float32Array([
+		0.5, 0.5, 0.0,
+		-0.5, 0.5, 0.0,
+		0.0, -0.5, 0.0		
+	]);
+
+	const elementPerVertex = 3;
+
+	// Create and bind buffer
+	const buffer = gl.createBuffer();
+	if (!buffer)
+	{
+		throw new Error("no webgl");
+	}
+
+	gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+	gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.STATIC_DRAW);
+	gl.vertexAttribPointer(aPosition, elementPerVertex, gl.FLOAT, false, 0, 0);
+	gl.enableVertexAttribArray(aPosition);
+
+	// Draw
+	gl.drawArrays(gl.TRIANGLES, 0, vertexData.length / elementPerVertex);
+	// gl.drawArrays(gl.POINTS, 0, vertexData.length / elementPerVertex);
+
+	// Cleanup
+	gl.deleteShader(vertexShader);
+	gl.deleteShader(fragmentShader);
+	gl.deleteProgram(shaderProgram);
+</script>
+
+</html>
