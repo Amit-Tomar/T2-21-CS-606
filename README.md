@@ -24,10 +24,15 @@ For this, you need to serve the static files using any server. eg.
 	2. `http-server`
 
 
-## Basic Javascript tutorials (1 Hour each)
+## Basic Javascript tutorials
 
-1. https://www.youtube.com/watch?v=W6NZfCO5SIk
-2. https://www.youtube.com/watch?v=NCwa_xi0Uuc
+1. https://www.youtube.com/watch?v=W6NZfCO5SIk (JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour)
+
+2. https://www.youtube.com/watch?v=NCwa_xi0Uuc (ES6 Tutorial: Learn Modern JavaScript in 1 Hour)
+
+3. https://www.youtube.com/watch?v=PFmuCDHHpwk (Object-oriented Programming in JavaScript in 1 Hour)
+
+4. https://www.youtube.com/watch?v=pTB0EiLXUC8 (Object-oriented Programming in 7 minutes)
 
 ## Debugging JS in Chrome
 
