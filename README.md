@@ -62,3 +62,21 @@ https://www.youtube.com/watch?v=zxQjlIViRBE
 https://www.youtube.com/watch?v=6-9XFm7XAT8
 
 3. https://learnopengl.com/
+
+
+## Transformations :
+
+1. gl-matrix documentation : https://glmatrix.net/docs/index.html
+
+2. David Parker model transformations using gl-matrix :
+
+https://www.youtube.com/watch?v=yo7vXCQy7JA&list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl&index=38
+https://www.youtube.com/watch?v=yo7vXCQy7JA&list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl&index=39
+https://www.youtube.com/watch?v=yo7vXCQy7JA&list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl&index=40
+https://www.youtube.com/watch?v=yo7vXCQy7JA&list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl&index=41
+https://www.youtube.com/watch?v=yo7vXCQy7JA&list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoXnFl&index=42
+
+3. Model transform Playground : 
+
+https://math.hws.edu/graphicsbook/c2/s3.html
+https://math.hws.edu/graphicsbook/c7/s1.html
