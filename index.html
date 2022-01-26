@@ -1,10 +1,11 @@
 <html lang="en">
 
 <head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
 	<style>
 		body {
 			background-color: #f5f5f5;
-			overflow: hidden;
+			/* overflow: hidden; */
 			margin: 0;
 		}
 	</style>
@@ -18,9 +19,49 @@
 			<li>Draw a triangle</li>
 			<li>User defined vertex positions</li>
 			<li>Shaders as strings</li>
-			<li>No resuability of code</li>
+			<b>
+				<li>No resuability of code</li>
+				<li>Difficult to talk about at higher level</li>
+			</b>
 		</ul>		
+		<li> <a href="./src/example2/">WebGL Minimal - Draw Triangle - As classes</a> </li>
+		<ul>
+			<li>Code changed to classes</li>
+			<li>Reusability and abstraction</li>
+			<li>Shaders as external files</li>
+		</ul>		
+		<ul>
+			<b>
+				<li>How to draw multiple shapes ?</li>
+				<li>How to draw triangles with differnt size/location ?</li>			
+			</b>
+		</ul>	
+		<li> <a href="./src/example3/">WebGL Minimal - Draw Multiple Triangles - Different locations/size </a> </li>
+		<ul>
+			<li>Multiple primitives with their own properties using constructor parameters</li>
+		</ul>		
+		<ul>
+			<b>
+				<li>How to change primitive render properties ?</li>				
+			</b>
+		</ul>	
+		<li> <a href="./src/example4/">WebGL Minimal - Draw Multiple Triangles - Different colors </a> </li>
+		<ul>
+			<li>Multiple primitives with their own rendering properties using uniform variables</li>
+		</ul>		
+		<ul>
+			<b>
+				<li>How to change primitive render properties ?</li>
+				<li>How to transform primitives?</li>				
+				<li>How to change something in scene and re-draw?</li>				
+			</b>
+		</ul>		
+		<li> <a href="./src/example5/">WebGL Minimal - Draw Multiple Triangles </a> </li>
+		<ul>
+			<li>Multiple primitives with transform and render loops</li>
+		</ul>				
 	</ol>
+	
 </body>
 
 </html>
