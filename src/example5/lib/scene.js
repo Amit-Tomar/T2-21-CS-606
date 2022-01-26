@@ -12,4 +12,9 @@ export class Scene
 			this.primitives.push(primitive)
 		}
 	}
+
+	centroid()
+	{
+		// @ToDo : Return the centroid of all the primitives in the scene
+	}
 }
