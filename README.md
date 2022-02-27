@@ -80,3 +80,8 @@ https://www.youtube.com/watch?v=yo7vXCQy7JA&list=PLPqKsyEGhUnaOdIFLKvdkXAQWD4DoX
 
 https://math.hws.edu/graphicsbook/c2/s3.html
 https://math.hws.edu/graphicsbook/c7/s1.html
+
+## Dat GUI 
+
+1. Tutorial : https://web.archive.org/web/20160505102421/http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage
+2. https://github.com/dataarts/dat.gui
