@@ -15,6 +15,6 @@ export class Scene
 
 	centroid()
 	{
-		// @ToDo : Return the centroid of all the primitives in the scene
+		// @ToDo : Return the centroid as per the requirements of mode-2
 	}
 }
