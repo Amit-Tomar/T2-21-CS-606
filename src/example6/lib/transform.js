@@ -12,7 +12,7 @@ export class Transform
 		
 		this.rotationAngle = 0;
 		this.rotationAxis = vec3.create();
-		vec3.set(this.rotationAxis, 0, 0, 1);
+		vec3.set(this.rotationAxis, 1, 1, 0);
 
 		this.modelTransformMatrix = mat4.create();
 		mat4.identity(this.modelTransformMatrix);
@@ -23,6 +23,7 @@ export class Transform
 	updateModelTransformMatrix()
 	{
 		mat4.identity(this.modelTransformMatrix);
-		mat4.translate(this.modelTransformMatrix, this.modelTransformMatrix, this.translate);		
+		mat4.translate(this.modelTransformMatrix, this.modelTransformMatrix, this.translate);	
+		mat4.rotate(this.modelTransformMatrix, this.modelTransformMatrix, this.rotationAngle, this.rotationAxis);	
 	}	
 }
