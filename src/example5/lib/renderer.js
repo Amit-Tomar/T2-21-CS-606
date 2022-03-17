@@ -42,7 +42,7 @@ export class WebGLRenderer
 			primitive.transform.updateModelTransformMatrix();
 
 			shader.bindArrayBuffer(shader.vertexAttributesBuffer, primitive.vertexPositions);
-			shader.fillAttributeData("aPosition", primitive.vertexPositions, 3,  3 * primitive.vertexPositions.BYTES_PER_ELEMENT, 0);		
+			shader.fillAttributeData("aPosition", 3,  3 * primitive.vertexPositions.BYTES_PER_ELEMENT, 0);		
 					
 			shader.setUniform4f("uColor", [1,0,0,1]);		
 			

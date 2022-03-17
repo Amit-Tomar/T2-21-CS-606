@@ -99,14 +99,15 @@ export class Shader
 		this.gl.bufferData(this.gl.ARRAY_BUFFER, data, this.gl.DYNAMIC_DRAW);
 	}
 
-	fillAttributeData(attributeName, data, elementPerAttribute, stride, offset)
+	fillAttributeData(attributeName, elementPerAttribute, stride, offset)
 	{		
-		this.gl.enableVertexAttribArray(this.attribute(attributeName));
-		this.gl.vertexAttribPointer(data, elementPerAttribute, this.gl.FLOAT, false, stride, offset);
+		const attributeIndex = this.attribute(attributeName);
+		this.gl.enableVertexAttribArray(attributeIndex);
+		this.gl.vertexAttribPointer(attributeIndex, elementPerAttribute, this.gl.FLOAT, false, stride, offset);
 	}
 
 	drawArrays(numberOfElements) 
 	{
 		this.gl.drawArrays(this.gl.TRIANGLES, 0, numberOfElements);
 	}
-}
+}	

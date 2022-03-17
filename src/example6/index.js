@@ -37,7 +37,7 @@ renderer.setAnimationLoop( animation );
 
 //Draw loop
 function animation()
-{	
+{
 	renderer.clear(0.9,0.9,0.9,1);
 	renderer.render(scene, shader);	
 }

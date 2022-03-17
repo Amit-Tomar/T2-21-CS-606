@@ -27,7 +27,7 @@ export class WebGLRenderer
 	render(primitive, shader) 
 	{
 		shader.bindArrayBuffer(shader.vertexAttributesBuffer, primitive.vertexPositions);
-		shader.fillAttributeData("aPosition", primitive.vertexPositions, 3,  3 * primitive.vertexPositions.BYTES_PER_ELEMENT, 0);			
+		shader.fillAttributeData("aPosition", 3,  3 * primitive.vertexPositions.BYTES_PER_ELEMENT, 0);			
 		
 		// Draw
 		shader.drawArrays(primitive.vertexPositions.length / 3);
